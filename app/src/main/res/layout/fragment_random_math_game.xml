@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frmg_mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_math"
+    tools:context="activity.MainActivity">
+
+    <Button
+        android:id="@+id/frmg_btnStart"
+        android:layout_width="300dp"
+        android:layout_height="179dp"
+        android:background="@drawable/buttonstartcustom"
+        android:text="Bắt đầu"
+        android:textColor="#000"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/frmg_progTimer"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:progressDrawable="@drawable/customprogressbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="10dp"
+        android:max="60"
+        android:progress="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/frmg_gameOver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="150dp"
+        android:textAlignment="center"
+        android:textColor="#388E3C"
+        android:textSize="72sp"
+        android:textStyle="bold|italic"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/frmg_tableLayout"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/frmg_retry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/btnagaincustom"
+        android:text="Chơi lại"
+        android:textAlignment="center"
+        android:textColor="#ff0000"
+        android:textSize="24sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frmg_btnStart"
+        app:layout_constraintVertical_bias="0.506" />
+
+    <TextView
+        android:id="@+id/frmg_timer"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/textviewtimecustom"
+        android:text="0"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:paddingTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/frmg_progTimer" />
+
+    <TextView
+        android:id="@+id/frmg_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="TextView"
+        android:textSize="24sp"
+        android:background="@drawable/textviewscorecustom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frmg_progTimer" />
+
+    <TextView
+        android:id="@+id/frmg_questions"
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="cursive"
+        android:background="@drawable/buttoncustom1"
+        android:text="TextView"
+        android:textSize="40sp"
+        android:textColor="#000"
+        android:textAlignment="center"
+        android:paddingTop="14dp"
+        app:layout_constraintEnd_toStartOf="@id/frmg_score"
+        app:layout_constraintStart_toEndOf="@+id/frmg_timer"
+        app:layout_constraintTop_toBottomOf="@+id/frmg_progTimer" />
+    <TableLayout
+
+
+        android:id="@+id/frmg_tableLayout"
+        android:layout_width="397dp"
+        android:layout_height="499dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.416"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frmg_questions">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/frmg_answerOne"
+                android:layout_width="100dp"
+                android:layout_height="150dp"
+                android:layout_weight="1"
+                android:height="200dp"
+                android:background="@drawable/buttoncustom1"
+                android:textColor="#000"
+                android:textSize="36sp"
+                android:fontFamily="cursive"
+                />
+
+            <Button
+                android:id="@+id/frmg_answerTwo"
+                android:layout_width="100dp"
+                android:layout_height="150dp"
+                android:layout_weight="1"
+                android:height="200dp"
+                android:background="@drawable/buttoncustom1"
+                android:textColor="#000"
+                android:textSize="36sp"
+                android:fontFamily="cursive"
+                />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <Button
+                android:id="@+id/frmg_answerThree"
+                android:layout_width="100dp"
+                android:layout_height="150dp"
+                android:layout_weight="1"
+                android:height="200dp"
+                android:background="@drawable/buttoncustom1"
+                android:textColor="#000"
+                android:textSize="36sp"
+                android:fontFamily="cursive"
+                />
+
+            <Button
+                android:id="@+id/frmg_answerFour"
+                android:layout_width="100dp"
+                android:layout_height="150dp"
+                android:layout_weight="1"
+                android:height="200dp"
+                android:background="@drawable/buttoncustom1"
+                android:textColor="#000"
+                android:textSize="36sp"
+                android:fontFamily="cursive"
+                />
+
+        </TableRow>
+
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/frmg_bottomMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="TextView"
+        android:textColor="#000"
+        android:textSize="30sp"
+        android:background="@drawable/tvquestioncustom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.552"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frmg_btnStart"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

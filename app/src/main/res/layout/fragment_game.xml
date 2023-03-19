@@ -1,0 +1,80 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="fragment.GameFragment"
+    android:id="@+id/fg_mainLayout">
+
+    <!-- TODO: Update blank fragment layout -->
+    <Button
+        android:id="@+id/fg_btnStart"
+        android:layout_width="300dp"
+        android:layout_height="179dp"
+        android:background="@drawable/buttonstartcustom"
+        android:text="Bắt đầu"
+        android:layout_marginTop="300dp"
+        android:layout_marginLeft="60dp"
+        android:textColor="#000"
+        android:textSize="36sp"
+         />
+
+    <ProgressBar
+        android:id="@+id/fg_progTimer"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:progressDrawable="@drawable/customprogressbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="10dp"
+        android:progress="0"
+        />
+
+    <TextView
+        android:id="@+id/fg_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="250dp"
+        android:text="textview"
+        android:textSize="24sp"
+        android:background="@drawable/textviewscorecustom"
+        />
+
+    <TextView
+        android:id="@+id/fg_bottomMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="650dp"
+        android:layout_marginLeft="20dp"
+        android:text="Bấm nút Bắt đầu để chơi"
+        android:textColor="#000"
+        android:textSize="30sp"
+        android:background="@drawable/tvquestioncustom" />
+
+    <TextView
+        android:id="@+id/fg_gameOver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:textAlignment="center"
+        android:textColor="#388E3C"
+        android:text="abc"
+        android:textSize="72sp"
+        android:textStyle="bold|italic" />
+
+    <Button
+        android:id="@+id/fg_retry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="550dp"
+        android:layout_marginLeft="135dp"
+        android:background="@drawable/btnagaincustom"
+        android:text="Chơi lại"
+        android:textAlignment="center"
+        android:textColor="#ff0000"
+        android:textSize="24sp" />
+
+</RelativeLayout>
